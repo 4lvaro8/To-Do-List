@@ -49,12 +49,6 @@ const Home = () => {
 
                     {toDos.map((item, id) =>
                         <ToDoItem key={id} label={item.label}
-                            toggle_todo={() =>
-                                settoDos(toDos.toSpliced(id, 1, {
-                                    label: item.label,
-                                    is_done: !item.is_done,
-                                }
-                                ))}
                             delete_toDo={() => settoDos(toDos.toSpliced(id, 1))}
                         />)}
 
